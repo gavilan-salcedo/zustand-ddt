@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import { Typography, Input, Select, Flex, Checkbox, Button } from 'antd';
-import { useStore} from '../store/store'
+import { useStore} from '../store/example1Store'
 
 function Example1() {
 
@@ -20,7 +20,7 @@ function Example1() {
     <div className="App" style={{padding: '20px', display: 'flex',flexDirection: 'column', gap: '20px'}}>
         <Title>TODO LIST</Title>
         <Flex gap={8}>
-            <Input placeholder="Add Todo" onChange={(e) => setInputValue(e.target.value)} />
+            <Input placeholder="Add Todo" onChange={(e) => setInputValue(e.target.value)} value={inputValue}/>
             <Button onClick={handleSubmit}>Submit</Button>
             <Select
                 defaultValue="All"
